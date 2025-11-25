@@ -1,4 +1,6 @@
-## Part 4 - Project Description & Diagram
+# Part 4 - Project Description & Diagram
+## **.::Part1::.**
+### *Section 1:*
 ### Building a Web Service Container
 - **Create a Dockerfile using a plain text document and save it.** (The name must be all lowercase)
     - First Line: FROM
@@ -44,3 +46,9 @@
     - Expiration date: Set an expiration date based on your security policies
     - Access permissions: Read, Write, or Delete. (Set to read & write to be able to push)
 5. Select Generate. Copy the token that appears on the screen and save it. You won't be able to retrieve the token once you exit the screen.
+
+## **.::Part 2::.**
+### *Section 1:*
+### *Section 2:*
+### *Section 3:*
+**Resources:** [GitHub Secrets And Variables](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets), [GitHub Workflows](https://www.geeksforgeeks.org/git/github-workflows/), [Checkout Action](https://github.com/marketplace/actions/checkout), [Setup Docker Buildx Action](https://github.com/docker/setup-buildx-action/releases), [Login Action](https://github.com/docker/login-action/pkgs/container/login-action)
