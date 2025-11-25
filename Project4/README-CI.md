@@ -44,6 +44,3 @@
     - Expiration date: Set an expiration date based on your security policies
     - Access permissions: Read, Write, or Delete. (Set to read & write to be able to push)
 5. Select Generate. Copy the token that appears on the screen and save it. You won't be able to retrieve the token once you exit the screen.
-
-### Web Content
-- The 
