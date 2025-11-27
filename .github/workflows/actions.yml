@@ -4,12 +4,10 @@ name: Build and Push Docker Image
 # is a push to the main branch.
 on:
   push:
-    tags:
-      - '*'
     branches:
       - main 
-           
-  
+    tags:
+      - 'v*'
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
@@ -44,12 +42,12 @@ jobs:
   # uses: docker/metadata-action@318604b99e75e41977312d83839a89be02ca4893
         uses: docker/metadata-action@v5.9.0
         with:
-          # Where to get context data. Allowed options are "workflow"  (default), "git".
-          context: git
+          # Where to get context data. Allowed options are "workflow"  (default), "git" 
+            images: ${{ secrets.DOCKER_USERNAME }}/my-app
+            tags:
           # List of tags as key-value pair attributes
-          tags: 
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}
-            type=semver,pattern={{major}}
+              type=semver,pattern={{version}}
+              type=semver,pattern={{major}}.{{minor}}
+              type=semver,pattern={{major}}
         
           
