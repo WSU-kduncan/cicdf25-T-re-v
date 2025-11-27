@@ -52,3 +52,11 @@
 ### **.: 2 :.**
 ### **.: 3 :.**
 **Resources:** [GitHub Secrets And Variables](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets), [GitHub Workflows](https://www.geeksforgeeks.org/git/github-workflows/), [Checkout Action](https://github.com/marketplace/actions/checkout), [Setup Docker Buildx Action](https://github.com/docker/setup-buildx-action/releases), [Login Action](https://github.com/docker/login-action/pkgs/container/login-action)
+
+## **.:Part 3 - Semantic Versioning:.**
+
+### **.: 1 :.**
+
+### **.: 2 :.**
+
+### **.: 3 :.**
