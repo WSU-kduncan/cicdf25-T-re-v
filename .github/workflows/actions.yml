@@ -43,7 +43,7 @@ jobs:
         uses: docker/metadata-action@v5.9.0
         with:
           # Where to get context data. Allowed options are "workflow"  (default), "git" 
-            images: ${{ secrets.DOCKER_USERNAME }}/my-app
+            images: ${{ secrets.DOCKER_USERNAME }}/project3:latest
             tags:
           # List of tags as key-value pair attributes
               type=semver,pattern={{version}}
