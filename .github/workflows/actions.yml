@@ -3,9 +3,7 @@ name: Build and Push Docker Image
 # The actions will be triggered when there
 # is a push to the main branch.
 on:
-  push:
-    branches:
-      - main 
+  push: 
     tags:
       - 'v*'
 jobs:
