@@ -27,15 +27,6 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_TOKEN }}
-
-      # Action to build and push image
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          file: ./Project4/dockerfile
-          push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/project3:latest
       
       - name: Docker Metadata action
   # You may pin to the exact commit or the version.
@@ -50,4 +41,11 @@ jobs:
               type=semver,pattern={{major}}.{{minor}}
               type=semver,pattern={{major}}
         
-          
+          # Action to build and push image
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./Project4/dockerfile
+          push: true
+          tags: ${{ secrets.DOCKER_USERNAME }}/project3:latest
