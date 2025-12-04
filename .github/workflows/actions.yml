@@ -31,7 +31,7 @@ jobs:
   # uses: docker/metadata-action@318604b99e75e41977312d83839a89be02ca4893
         uses: docker/metadata-action@v5.9.0
         with:
-          # Where to get context data. Allowed options are "workflow"  (default), "git" 
+          # Where to get context data. Allowed options are "workflow" (default), "git" 
             images: ${{ secrets.DOCKER_USERNAME }}/project3 #FIXED
             tags: 
           # List of tags as key-value pair attributes
