@@ -27,13 +27,17 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
       
       - name: Docker Metadata action
+  # You may pin to the exact commit or the version.
+  # uses: docker/metadata-action@318604b99e75e41977312d83839a89be02ca4893
         uses: docker/metadata-action@v5.9.0
         with:
-          images: ${{ secrets.DOCKER_USERNAME }}/project3 #FIXED
-          tags: |
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}
-            type=semver,pattern={{major}}
+          # Where to get context data. Allowed options are "workflow" (default), "git" 
+            images: ${{ secrets.DOCKER_USERNAME }}/project3 #FIXED
+            tags:
+          # List of tags as key-value pair attributes
+              type=semver,pattern={{version}}
+              type=semver,pattern={{major}}.{{minor}}
+              type=semver,pattern={{major}}
         
           # Action to build and push image
       - name: Build and push Docker image
@@ -42,5 +46,5 @@ jobs:
           context: .
           file: ./Project4/dockerfile
           push: true
-          #tags: ${{ secrets.DOCKER_USERNAME }}/project3:latest
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ secrets.DOCKER_USERNAME }}/project3:latest
+          #tags: ${{ steps.meta.outputs.tags }}
