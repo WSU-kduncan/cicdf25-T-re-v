@@ -176,3 +176,11 @@ Integrated Copilot
     - Used to understand how the login action works.
 Integrated Copilot
     - Used to help complete sentences and correct grammar in the README.md and workflow files.
+
+## Errors
+- Occurs when: tags: \$\{\{ steps.meta.outputs.tags \}\}, is used in the section to build and push the image. This error did not occur in the previous version: tags: \$\{\{ secrets.DOCKER_USERNAME \}\}/project3:latest.
+![Error1](./images/Error%201.jpg)
+
+ - Occurs when "|" the pip charater is used in the section for the meta-data. The error did not occur when the pipe was left out.
+![Error2](./images/Error%201.jpg)
+
