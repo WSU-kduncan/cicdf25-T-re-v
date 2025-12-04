@@ -184,3 +184,5 @@ Integrated Copilot
  - Occurs when "|" the pip charater is used in the section for the meta-data. The error did not occur when the pipe was left out.
 ![Error2](./images/Error%201.jpg)
 ![Error2-1](./images/Error%202-1.jpg)
+
+**\*\*I deleted the comment above the key-value tags which fixed the indentation error, but it still throwing the same "tag is needed" error. I put it all back so it would at least run.**
