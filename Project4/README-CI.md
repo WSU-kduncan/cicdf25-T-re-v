@@ -35,19 +35,17 @@
             - [CSS File](web-content/style.css) - CSS file for both HTML files.
     
     - Dockerfile: [Dockerfile](dockerfile)
-- **The command to create the container from this image**
-    - docker build -t dockerfile:project3 .
+- **The command to create an image from a dockerfile**
+    - docker build -t dockerfile .
         - "-t" creates the terminal interface for the container
         - "dockerfile" is the name of the file to copied.
-        - "project3" is the name tag for the container.
+        - "latest" is automatically given as the default name tag used for the image.
 - **Pushing the Container to DockerHub**
     - In a terminal, use "docker login" to log 
     - Tag the image with your Dockerhub username and the repository name.
         - docker tag "image name" "dockerhub username"/"repo name":"tag"
-        - docker tag my_image user/repo_name:first_tag
     - Push the image to DockerHub
         - docker push "dockerhub username"/"repo name":"tag"
-        - docker push user/repo_name:first_push
 - **Create a Container from DockerHub**
     - Pull the image from DockerHub:
         - docker pull "dockerhub username"/"repo name":"tag"
