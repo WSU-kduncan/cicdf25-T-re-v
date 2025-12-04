@@ -33,7 +33,7 @@ jobs:
         with:
           # Where to get context data. Allowed options are "workflow"  (default), "git" 
             images: ${{ secrets.DOCKER_USERNAME }}/project3 #FIXED
-            tags: |
+            tags: 
           # List of tags as key-value pair attributes
               type=semver,pattern={{version}}
               type=semver,pattern={{major}}.{{minor}}
