@@ -114,8 +114,19 @@
 - **DockerHub Repository**
     - [DockerHub Repository](https://hub.docker.com/repository/docker/spootymcspoot/project3/general)
 
-**Resources:** [GitHub Secrets And Variables](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets), [GitHub Workflows](https://www.geeksforgeeks.org/git/github-workflows/), [Checkout Action](https://github.com/marketplace/actions/checkout), [Setup Docker Buildx Action](https://github.com/docker/setup-buildx-action/releases), [Login Action](https://github.com/docker/login-action/pkgs/container/login-action)
-
+**Resources:** 
+[GitHub Secrets And Variables](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets)
+    - Used to learn how to set up and use GitHub Sectrets.
+[GitHub Workflows](https://www.geeksforgeeks.org/git/github-workflows/)
+    - Used to dumb down how to build a HitHub workflow.
+[Checkout Action](https://github.com/marketplace/actions/checkout)
+    - Used to understand how the checkout action works.
+[Setup Docker Buildx Action](https://github.com/docker/setup-buildx-action/releases)
+    - Used to understand how the setup buildx action works.
+[Login Action](https://github.com/docker/login-action/pkgs/container/login-action)
+    - Used to understand how the login action works.
+Integrated Copilot
+    - Used to help complete sentences and correct grammar in the README.md and workflow files.
 ## **.:Part 3 - Semantic Versioning:.**
 
 ### **.: 1 :.**
@@ -152,4 +163,16 @@
 - **DockerHub Repository**
     - [DockerHub Repository](https://hub.docker.com/repository/docker/spootymcspoot/project3/general)
 
-**Resources:** [GitHub Secrets And Variables](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets), [GitHub Workflows](https://www.geeksforgeeks.org/git/github-workflows/), [Checkout Action](https://github.com/marketplace/actions/checkout), [Setup Docker Buildx Action](https://github.com/docker/setup-buildx-action/releases), [Login Action](https://github.com/docker/login-action/pkgs/container/login-action)
+**Resources:** 
+[GitHub Secrets And Variables](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets)
+    - Used to learn how to set up and use GitHub Sectrets.
+[GitHub Workflows](https://www.geeksforgeeks.org/git/github-workflows/)
+    - Used to dumb down how to build a HitHub workflow.
+[Checkout Action](https://github.com/marketplace/actions/checkout)
+    - Used to understand how the checkout action works.
+[Setup Docker Buildx Action](https://github.com/docker/setup-buildx-action/releases)
+    - Used to understand how the setup buildx action works.
+[Login Action](https://github.com/docker/login-action/pkgs/container/login-action)
+    - Used to understand how the login action works.
+Integrated Copilot
+    - Used to help complete sentences and correct grammar in the README.md and workflow files.
