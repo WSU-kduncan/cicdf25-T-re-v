@@ -84,6 +84,10 @@ Resources:
           FromPort: '22'
           ToPort: '22'
           CidrIp: 192.168.0.0/23  # Instances within VPC
+        - IpProtocol: tcp
+          FromPort: '22'
+          ToPort: '22'
+          CidrIp: 66.213.101.3/32  # Troy Public Library
   NetworkACL:
     Type: 'AWS::EC2::NetworkAcl'
     Properties:
