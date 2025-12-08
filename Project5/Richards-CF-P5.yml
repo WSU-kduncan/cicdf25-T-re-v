@@ -1,7 +1,10 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
   Richards CF Template to create a Linux instance. The instance is
-  configured to install basic packages and create a hello.txt file.
+  configured to install basic packages build a bash script that stops 
+  and removes the formerly running container, pulls the latest tagged 
+  image from your DockerHub repository, and runs a new container process 
+  with the pulled image.
 Parameters:
   KeyName:
     Description: Name of an existing EC2 KeyPair to enable SSH access to the instance
@@ -18,7 +21,7 @@ Resources:
       CidrBlock: 192.168.0.0/23
       Tags:
         - Key: Name
-          Value: Richards-CF-VPC
+          Value: Project5-CF-VPC
   Subnet:
     Type: 'AWS::EC2::Subnet'
     Properties:
@@ -26,13 +29,13 @@ Resources:
       CidrBlock: 192.168.0.0/24
       Tags:
         - Key: Name
-          Value: Richards-CF-Subnet
+          Value: Project5-CF-Subnet
   InternetGateway:
     Type: 'AWS::EC2::InternetGateway'
     Properties:
       Tags:
         - Key: Name
-          Value: Richards-CF-InternetGateway
+          Value: Project5-CF-InternetGateway
   AttachGateway:
     Type: 'AWS::EC2::VPCGatewayAttachment'
     Properties:
@@ -44,7 +47,7 @@ Resources:
       VpcId: !Ref VPC
       Tags:
         - Key: Name
-          Value: Richards-CF-RouteTable
+          Value: Project5-CF-RouteTable
   Route:
     Type: 'AWS::EC2::Route'
     DependsOn: AttachGateway
@@ -87,7 +90,7 @@ Resources:
       VpcId: !Ref VPC
       Tags:
         - Key: Name
-          Value: Richards-CF-NetworkACL
+          Value: Project5-CF-NetworkACL
   InboundAllowAllRule:
     Type: AWS::EC2::NetworkAclEntry
     Properties:
