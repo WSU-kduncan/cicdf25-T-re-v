@@ -81,14 +81,6 @@ Resources:
           FromPort: '22'
           ToPort: '22'
           CidrIp: 192.168.0.0/23  # Instances within VPC
-        - IpProtocol: tcp
-          FromPort: '80'
-          ToPort: '80'
-          CidrIp: 0.0.0.0/0 # HTTP access from anywhere
-        - IpProtocol: tcp
-          FromPort: '8080'
-          ToPort: '8080'
-          CidrIp: 0.0.0.0/0 # Alternate HTTP access from anywhere
   NetworkACL:
     Type: 'AWS::EC2::NetworkAcl'
     Properties:
@@ -135,11 +127,18 @@ Resources:
     DependsOn: AttachGateway
     Properties:
       ImageId: !FindInMap [AWSRegionAMI, !Ref "AWS::Region", HVM64]
-      InstanceType: t2.micro
-      KeyName: Richards
+      InstanceType: t2.medium
+      KeyName: vockey
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs:
+            VolumeType: gp2
+            VolumeSize: '30'
+            DeleteOnTermination: 'true'
+            Encrypted: 'false'
       Tags:
         - Key: Name
-          Value: Richards-CF-AMI
+          Value: Project5-CF
       NetworkInterfaces:
         - GroupSet:
             - !Ref SecurityGroup
