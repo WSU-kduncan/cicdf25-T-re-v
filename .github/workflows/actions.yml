@@ -27,9 +27,10 @@ jobs:
         with:
           images: ${{ secrets.DOCKER_USERNAME }}/project3
           tags: |
-            type=semver,pattern={{version}},prefix=v
-            type=semver,pattern={{major}}.{{minor}},prefix=v
-            type=semver,pattern={{major}},prefix=v
+            ttype=semver,pattern={{version}},source=tag
+            type=semver,pattern={{major}}.{{minor}},source=tag
+            type=semver,pattern={{major}},source=tag
+
 
       - name: Show metadata outputs
         run: |
