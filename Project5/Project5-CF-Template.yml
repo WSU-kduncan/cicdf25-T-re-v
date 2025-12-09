@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
-  Richards CF Template to create a Linux instance. The instance is
+  Project5-CF Template to create a Linux instance. The instance is
   configured to install basic packages build a bash script that stops 
   and removes the formerly running container, pulls the latest tagged 
   image from your DockerHub repository, and runs a new container process 
