@@ -57,10 +57,8 @@ C. [Script](./refresh.sh)
 ## **.:: Part 2 - Listen ::.**
 ### **.: 1. Configuring a webhook Listener on EC2 Instance :.**
     A. Use this code to install the adnanh webook:
-        wget https://github.com/adnanh/webhook/releases/latest/download/webhook-linux-amd64.tar.gz
-        tar -xzf webhook-linux-amd64.tar.gz
-        sudo mv webhook-linux-amd64/webhook /usr/local/bin/webhook
-        sudo chmod +x /usr/local/bin/webhook
+        - **sudo apt install webhook**
     B. To verify the installation, run this command:
-        webhook -version
-    C. The definition file for the webhook will trigger the bash script when a payload is received.
+        - webhook -version
+    C. The definition file for the webhook will trigger the bash script when a payload is received:
+        -
