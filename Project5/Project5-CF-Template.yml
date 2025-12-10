@@ -157,8 +157,8 @@ Resources:
       UserData:
         Fn::Base64: |
           #!/bin/bash -xe
-          apt-get update && \
-          apt-get install -y \
+          apt update && \
+          apt install -y \
             git \
             python3 \
             python3-pip \
