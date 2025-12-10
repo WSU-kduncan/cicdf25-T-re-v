@@ -164,4 +164,5 @@ Resources:
             python3-pip \
             apache2 \
             wamerican \
-            docker.io
+            docker.io \
+            wget
