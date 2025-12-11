@@ -1,0 +1,23 @@
+[
+  {
+    "id": "deploy",
+    "execute-command": "/home/ubuntu/EC2_Hooks/deployment/refresh.sh",
+    "command-working-directory": "/home/ubuntu/EC2_Hooks/deployment",
+
+    "pass-environment-to-command": [
+      {
+        "name": "WEBHOOK_SOURCE",
+        "source": "header",
+        "property": "User-Agent"
+      }
+    ],
+
+    "secret": "Cheese",
+
+    "signature": {
+      "header": "X-Hub-Signature-256",
+      "algorithm": "sha256",
+      "secret": "Cheese"
+    }
+  }
+]
