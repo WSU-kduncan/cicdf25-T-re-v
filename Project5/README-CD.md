@@ -84,3 +84,12 @@
     C. For simplicity, I chose to send the payload on every push to the main branch.
     D. To test the payload sender, make a push to the main branch. Then, on GitHub,check the webhook logs for the webhook event.
     E. For GitHub simply create a new branch and push to it. Then check the webhook logs on GitHub to confirm no payloads were sent or received.
+
+## **.:: References ::.**
+1. [Webhook As A Listening Service](https://github.com/pattonsgirl/CEG3120/blob/main/CourseNotes/webhook.md)
+2. [DockerDocs - Webhooks](https://docs.docker.com/docker-hub/repos/manage/webhooks/)
+3. [GitHubDocs - Webhook Events and Payloads](https://docs.github.com/en/webhooks/webhook-events-and-payloads)
+4. [DeepWiki - adnanh/webhook](https://deepwiki.com/adnanh/webhook/3-hook-configuration)
+5. [Copilot - With Absolute Shame](https://copilot.microsoft.com/) 
+    - Copilot was used to help generate the webhook.yml file. 
+    - It was the main source for troubleshooting everything relating to getting webhooks working.
