@@ -52,13 +52,35 @@
     A. The bash script will stop and remove the current running container. Then Pull the latest tagged image from DockerHub and run a new container process with the pulled image.
     B. To test the script, open a terminal and navigate to the directory with the script. Then run this command in the terminal:
         bash "script_name".sh
-C. [Script](./refresh.sh)
+### C. [Script](./refresh.sh)
 
 ## **.:: Part 2 - Listen ::.**
 ### **.: 1. Configuring a webhook Listener on EC2 Instance :.**
     A. Use this code to install the adnanh webook:
-        - **sudo apt install webhook**
+        - sudo apt install webhook
     B. To verify the installation, run this command:
         - webhook -version
-    C. The definition file for the webhook will trigger the bash script when a payload is received:
-        - test
+    C. The definition file for the webhook will trigger the bash script to refresh the container application when a webhook event is received from GitHub Actions.
+    D. To verify the definition file was loaded, run the command:
+        - curl -X POST http://localhost:"port"/hooks/"hook_name"
+        - journalctl -u webhook -f
+        - This will show the logs for the webhook service and confirm that the hook was received and processed.
+        - In the Docker process views, you'll see the old container stop and a new container start up.
+### E. [Webhook Definition](./webhook.yml)
+
+### **.: 2. Configure a webhook Service on EC2 Instance :.**
+    A. The webhook service file stops and removes the old container, pulls the latest tagged image from DockerHub, and runs a new container from the pulled image.
+    B. To start and enable the webhook service, run these commands:
+        - sudo systemctl start webhook
+        - sudo systemctl enable webhook
+    C. To verify the webhook service is capturing payloads and triggering script, use this command:
+        - journalctl -u webhook -f
+### D. [Webhook Service](./refresh.sh)
+
+## **.:: Part 3 - Send A Payload ::.**
+### **.: 1. Configuring A Payload Sender :.**
+    A. I chose GitHub because a SECRET token could be applied to the webhook for an extra layer of payload security.
+    B. In GitHub, go to the repository settings, then go to "Webhooks" and click "Add webhook". There you can enter the payload URL, content type, and secret token.
+    C. For simplicity, I chose to send the payload on every push to the main branch.
+    D. To test the payload sender, make a push to the main branch. Then, on GitHub,check the webhook logs for the webhook event.
+    E. For GitHub simply create a new branch and push to it. Then check the webhook logs on GitHub to confirm no payloads were sent or received.
