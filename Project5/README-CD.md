@@ -61,4 +61,4 @@ C. [Script](./refresh.sh)
     B. To verify the installation, run this command:
         - webhook -version
     C. The definition file for the webhook will trigger the bash script when a payload is received:
-        - 
+        - test
