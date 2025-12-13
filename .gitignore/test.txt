@@ -1,0 +1,27 @@
+Dec 13 21:01:03 ip-192-168-0-10 webhook[12903]: 54a1e58fe943db6c5532d6300dd29f6d42f9388541f6a632046b7cf37ce80f46
+Dec 13 21:01:03 ip-192-168-0-10 webhook[12903]: [webhook] 2025/12/13 21:01:03 [4e01eb] finished handling deploy
+Dec 13 21:01:07 ip-192-168-0-10 webhook[12903]: [webhook] 2025/12/13 21:01:07 [268bbe] incoming HTTP POST request from 140.82.115.77:43828
+Dec 13 21:01:07 ip-192-168-0-10 webhook[12903]: [webhook] 2025/12/13 21:01:07 [268bbe] deploy got matched
+Dec 13 21:01:07 ip-192-168-0-10 webhook[12903]: [webhook] 2025/12/13 21:01:07 [268bbe] deploy hook triggered successfully
+Dec 13 21:01:07 ip-192-168-0-10 webhook[12903]: [webhook] 2025/12/13 21:01:07 [268bbe] 200 | 0 B | 1.67099ms | 34.228.106.33:9090 | POST /hooks/deploy
+Dec 13 21:01:07 ip-192-168-0-10 webhook[12903]: [webhook] 2025/12/13 21:01:07 [268bbe] error extracting command arguments for environment: couldn't retrieve argument for {Source:header Name:WEBHOOK_SOURCE Env>
+Dec 13 21:01:07 ip-192-168-0-10 webhook[12903]: [webhook] 2025/12/13 21:01:07 [268bbe] executing /home/ubuntu/EC2_Hooks/deployment/refresh.sh (/home/ubuntu/EC2_Hooks/deployment/refresh.sh) with arguments ["/h>
+Dec 13 21:01:07 ip-192-168-0-10 sudo[14692]:   ubuntu : PWD=/home/ubuntu/EC2_Hooks/deployment ; USER=root ; COMMAND=/usr/bin/docker rm -f Project5
+Dec 13 21:01:07 ip-192-168-0-10 sudo[14692]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Dec 13 21:01:07 ip-192-168-0-10 sudo[14692]: pam_unix(sudo:session): session closed for user root
+Dec 13 21:01:07 ip-192-168-0-10 sudo[14752]:   ubuntu : PWD=/home/ubuntu/EC2_Hooks/deployment ; USER=root ; COMMAND=/usr/bin/docker pull spootymcspoot/project3:latest
+Dec 13 21:01:07 ip-192-168-0-10 sudo[14752]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Dec 13 21:01:08 ip-192-168-0-10 sudo[14752]: pam_unix(sudo:session): session closed for user root
+Dec 13 21:01:08 ip-192-168-0-10 sudo[14760]:   ubuntu : PWD=/home/ubuntu/EC2_Hooks/deployment ; USER=root ; COMMAND=/usr/bin/docker run -d --name Project5 -p 8000:80 --restart unless-stopped spootymcspoot/pro>
+Dec 13 21:01:08 ip-192-168-0-10 sudo[14760]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Dec 13 21:01:08 ip-192-168-0-10 sudo[14760]: pam_unix(sudo:session): session closed for user root
+Dec 13 21:01:08 ip-192-168-0-10 webhook[12903]: [webhook] 2025/12/13 21:01:08 [268bbe] command output: Stopping and removing old container (if any)...
+Dec 13 21:01:08 ip-192-168-0-10 webhook[12903]: Project5
+Dec 13 21:01:08 ip-192-168-0-10 webhook[12903]: Pulling latest image...
+Dec 13 21:01:08 ip-192-168-0-10 webhook[12903]: latest: Pulling from spootymcspoot/project3
+Dec 13 21:01:08 ip-192-168-0-10 webhook[12903]: Digest: sha256:56e7904c2d2891d385b31fd393a9c6de2121d88e363bf532713b13a8e1ac2d7d
+Dec 13 21:01:08 ip-192-168-0-10 webhook[12903]: Status: Image is up to date for spootymcspoot/project3:latest
+Dec 13 21:01:08 ip-192-168-0-10 webhook[12903]: docker.io/spootymcspoot/project3:latest
+Dec 13 21:01:08 ip-192-168-0-10 webhook[12903]: Starting new container...
+Dec 13 21:01:08 ip-192-168-0-10 webhook[12903]: 13dac773f7a8259789bcc012ab379f86c0e0318c7132b4ac4462f38b8ea2285d
+Dec 13 21:01:08 ip-192-168-0-10 webhook[12903]: [webhook] 2025/12/13 21:01:08 [268bbe] finished handling deploy
