@@ -93,3 +93,7 @@
 5. [Copilot - With Absolute Shame](https://copilot.microsoft.com/) 
     - Copilot was used to help generate the webhook.yml file. 
     - It was the main source for troubleshooting everything relating to getting webhooks working.
+
+## **.:: Post Presentation Fixes ::.**
+1. Fixed the security groups to include Wright State University IP range: 130.108.0.0/16
+2. Added a trigger to the webhook.

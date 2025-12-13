@@ -3,14 +3,35 @@
     "id": "deploy",
     "execute-command": "/home/ubuntu/EC2_Hooks/deployment/refresh.sh",
     "command-working-directory": "/home/ubuntu/EC2_Hooks/deployment",
-    "trigger-rule": {
-      "match": {
-        "signature": {
-          "header": "X-Hub-Signature-256",
-          "algorithm": "sha256",
-          "secret": "Cheese"
+    "trigger-rule":
+    {
+      "and":
+      [
+        {
+          "match":
+          {
+            "type": "payload-hmac-sha1",
+            "secret": "Eggs",
+            "parameter":
+            {
+              "source": "header",
+              "name": "X-Hub-Signature"
+            }
+          }
+        },
+        {
+          "match":
+          {
+            "type": "value",
+            "value": "refs/heads/master",
+            "parameter":
+            {
+              "source": "payload",
+              "name": "ref"
+            }
+          }
         }
-      }
+      ]
     }
   }
 ]
