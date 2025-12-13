@@ -7,19 +7,19 @@
     [
       {
         "source": "payload",
-        "name": "user_name"
+        "name": "user_name",
+        "value": "T-re-v"
       }
     ],
     "response-message": "Executing redeploy script",
-    "trigger-rule":
-    {
-      "match":
-      {
-      "signature": {
-        "header": "X-Hub-Signature-256",
-        "algorithm": "sha256",
-        "secret": "Cheese"
-      }
-    }    
+    "trigger-rule": {
+      "match": {
+        "signature": {
+          "header": "X-Hub-Signature-256",
+          "algorithm": "sha256",
+          "secret": "Cheese"
+        }
+      }    
+    }
   }
 ]
